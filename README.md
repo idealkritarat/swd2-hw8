@@ -1,36 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Venue Explorer - A08
 
-## Getting Started
+Continues A07 with a promotion video and React hooks.
 
-First, run the development server:
+## Run locally
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## A08 features
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `VideoPlayer` uses `useRef` and `useEffect` to play or pause the video.
+- `PromoteCard` starts playing `/vdo/venue.mp4` and provides a Pause/Play button.
+- `useWindowListener` blocks the context menu on the home page and removes its listener when the component unmounts.
+- Venue browsing, ratings, details, and booking pages are carried over from A07.
 
-## Learn More
+## Check
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm test -- --runInBand
+npm run lint
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The original assignment tests are in `__tests__/case1.test.tsx` through `case4.test.tsx`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The A08 Vercel deployment is pending. Add the actual A08 website link here after deployment, then push the updated README to the assignment repository.
